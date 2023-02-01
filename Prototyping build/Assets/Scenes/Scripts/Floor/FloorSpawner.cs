@@ -35,20 +35,35 @@ public class FloorSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Click\n");
+
+            //Need to put that into game space
+            floor_object = Instantiate(flooring, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,Camera.main.nearClipPlane)), Quaternion.identity);
+
+            //floor_list.Add(floor_object);
+
+            //SpawnFloors();
+        }
+    }
+
     void SpawnFloors()
     {
-        for(int i =0; i < numRunTry; i++)
+        for(int i=0; i < numRunTry; i++)
         {
             Vector3 randomSpawnpos = new Vector3 (Random.Range(minPos.x,maxPos.x), Random.Range(minPos.y, maxPos.y),0);
             foreach(GameObject Floor in floor_list)
             {
                 distance = Mathf.Sqrt(Mathf.Pow((Floor.transform.position.x - randomSpawnpos.x),2) + Mathf.Pow((Floor.transform.position.y - randomSpawnpos.y),2));
                 
-                if(distance < 2)
+                if(distance < 1)
                 {
                     break;
                 }
-                else if (distance >= 2 && floor_list.Last())
+                else if (distance >= 1 && floor_list.Last())
                 {
                     floor_object = Instantiate(flooring, randomSpawnpos, Quaternion.identity);
 
