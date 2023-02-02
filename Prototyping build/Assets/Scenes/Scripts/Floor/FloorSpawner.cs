@@ -23,6 +23,8 @@ public class FloorSpawner : MonoBehaviour
     GameObject floor_object;
     float distance;
 
+    int GridX = 1, GridY = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,9 +44,15 @@ public class FloorSpawner : MonoBehaviour
             Debug.Log("Click\n");
 
             //Need to put that into game space
-            floor_object = Instantiate(flooring, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,Camera.main.nearClipPlane)), Quaternion.identity);
+            Vector3 new_pos;
 
-            //floor_list.Add(floor_object);
+            new_pos.x = Mathf.Round(Input.mousePosition.x / GridX) * GridX;
+            new_pos.y = Mathf.Round(Input.mousePosition.y / GridY) * GridY;
+
+
+            floor_object = Instantiate(flooring, Camera.main.ScreenToWorldPoint(new Vector3(new_pos.x, new_pos.y,Camera.main.nearClipPlane)), Quaternion.identity);
+
+            floor_list.Add(floor_object);
 
             //SpawnFloors();
         }
