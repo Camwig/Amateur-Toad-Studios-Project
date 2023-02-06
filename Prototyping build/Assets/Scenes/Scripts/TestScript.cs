@@ -10,7 +10,7 @@ public class TestScript : MonoBehaviour
     private void Start()
     {
         /*18,10*/
-        grid = new GridSystem(18, 10, 2f, new Vector3(-9,-5));
+        grid = new GridSystem(18, 10, 1f, new Vector3(-9,-5));
     }
 
     private void Update()
@@ -26,8 +26,17 @@ public class TestScript : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            grid.GetXY(GetMouseWorldPosition(), out int x, out int y);
-            Instantiate(testTransform,grid.GetWorldPosition(x,y), Quaternion.identity);
+            
+            //if (grid.CanBuild() == true)
+            //{
+                grid.GetXY(GetMouseWorldPosition(), out int x, out int y);
+                Instantiate(testTransform, grid.GetWorldPosition(x, y), Quaternion.identity);
+                grid.SetTransform(testTransform);
+            //}
+            //else
+            //{
+            //    Debug.Log("NOPE CANT BUILD\n");
+            //}
         }
     }
 

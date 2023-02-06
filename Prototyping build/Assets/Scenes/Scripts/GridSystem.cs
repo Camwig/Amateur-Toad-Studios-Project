@@ -11,6 +11,8 @@ public class GridSystem
     private int[,] gridArray;
     private TextMesh[,] debugTextArray;
 
+    private Transform transform;
+
     public GridSystem(int width, int height, float cellSize, Vector3 OriginPos)
     {
         this.width = width;
@@ -47,6 +49,23 @@ public class GridSystem
         Debug.DrawLine(GetWorldPosition(width - diffrence, -diffrence2), GetWorldPosition(width- diffrence, height- diffrence2), Color.white, 100f);
 
         //SetValue(2, 1, 53);
+    }
+
+    //public GridObject(Grid)
+
+    public void SetTransform(Transform transform)
+    {
+        this.transform = transform;
+    }
+
+    public void ClearTransform()
+    {
+        transform = null;
+    }
+
+    public bool CanBuild()
+    {
+        return transform == null;
     }
 
     public Vector3 GetWorldPosition(int x,int y)
