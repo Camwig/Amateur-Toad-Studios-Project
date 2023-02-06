@@ -5,6 +5,7 @@ using UnityEngine;
 public class TestScript : MonoBehaviour
 {
     private GridSystem grid;
+    [SerializeField] private Transform testTransform;
 
     private void Start()
     {
@@ -21,6 +22,12 @@ public class TestScript : MonoBehaviour
 
             grid.SetThisValue(GetMouseWorldPosition(), 75);
 
+        }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            grid.GetXY(GetMouseWorldPosition(), out int x, out int y);
+            Instantiate(testTransform,grid.GetWorldPosition(x,y), Quaternion.identity);
         }
     }
 

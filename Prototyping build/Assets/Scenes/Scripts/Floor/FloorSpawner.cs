@@ -52,9 +52,9 @@ public class FloorSpawner : MonoBehaviour
 
             /*Input.mousePosition.x */
 
-            floor_object = Instantiate(flooring, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,Camera.main.nearClipPlane)), Quaternion.identity);
+            //floor_object = Instantiate(flooring, Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,Camera.main.nearClipPlane)), Quaternion.identity);
 
-            floor_list.Add(floor_object);
+            //floor_list.Add(floor_object);
 
             //SpawnFloors();
         }

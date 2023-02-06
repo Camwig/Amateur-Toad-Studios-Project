@@ -32,13 +32,13 @@ public class GridSystem
         int diffrence2 = 0;
 
         //Debug.Log(width + "" + height);
-        for (int x =0; x < gridArray.GetLength(0); x++)
+        for (int y =0; y < gridArray.GetLength(1); y++)
         {
-            for (int y=0; y<gridArray.GetLength(1); y++)
+            for (int x=0; x<gridArray.GetLength(0); x++)
             {
                 //Debug.Log(x + " " + y);
                 //Need to move it to the camera space aka reduce the size of the grid
-                debugTextArray[x,y] = CreateWorldText(null,gridArray[x,y].ToString(), (GetWorldPosition(x - diffrence, y - diffrence2) + new Vector3(cellSize,cellSize)*0.5f),5,Color.white, TextAnchor.MiddleCenter, TextAlignment.Center,1);
+                debugTextArray[x,y] = CreateWorldText(null,(x + ", " + y)/*gridArray[x,y].ToString()*/, (GetWorldPosition(x - diffrence, y - diffrence2) + new Vector3(cellSize,cellSize)*0.5f),5,Color.white, TextAnchor.MiddleCenter, TextAlignment.Center,1);
                 Debug.DrawLine(GetWorldPosition((x- diffrence), (y - diffrence2)), GetWorldPosition((x - diffrence), (y - diffrence2) + 1), Color.white, 100f);                
                 Debug.DrawLine(GetWorldPosition((x - diffrence), (y - diffrence2)), GetWorldPosition((x - diffrence) + 1, (y - diffrence2)),Color.white,100f);
             }
@@ -49,12 +49,12 @@ public class GridSystem
         //SetValue(2, 1, 53);
     }
 
-    private Vector3 GetWorldPosition(int x,int y)
+    public Vector3 GetWorldPosition(int x,int y)
     {
         return new Vector3(x, y) * cellSize + OriginPos;
     }
 
-    private void  GetXY(Vector3 worldPosition, out int x ,out int y)
+    public void  GetXY(Vector3 worldPosition, out int x ,out int y)
     {
         x = Mathf.FloorToInt((worldPosition - OriginPos).x / cellSize);
         y = Mathf.FloorToInt((worldPosition - OriginPos).y / cellSize);
