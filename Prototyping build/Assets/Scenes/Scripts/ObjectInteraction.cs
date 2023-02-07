@@ -11,8 +11,8 @@ public class ObjectInteraction : MonoBehaviour
     //}
 
    private Vector3 mousePosition;
-   private Collider2D targetObject;
-    private Vector3 offset;
+   //private Collider2D targetObject;
+   private Vector3 offset;
    public GameObject selectedObject;
 
     // Update is called once per frame
@@ -23,14 +23,16 @@ public class ObjectInteraction : MonoBehaviour
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
 
+        //Click and pick up
+
         if (Input.GetMouseButtonDown(0))
         {
-            targetObject = Physics2D.OverlapPoint(mousePosition);
-            if(targetObject)
-            {
-                selectedObject = targetObject.transform.gameObject;
+            //targetObject = Physics2D.OverlapPoint(mousePosition);
+            //if (targetObject)
+            //{
+                //selectedObject = targetObject.transform.gameObject;
                 offset = selectedObject.transform.position - mousePosition;
-            }
+            //}
         }
 
         if (selectedObject)
@@ -40,7 +42,7 @@ public class ObjectInteraction : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
-            selectedObject = null;
+            //selectedObject = null;
         }
     }
 }
