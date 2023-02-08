@@ -31,19 +31,46 @@ public class RotationInteraction : MonoBehaviour
 
         Vector2 direction = mousePosition - selectedObject.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //angle = Mathf.Clamp(angle, 30, 330);
+
+        //Clamps it between certain angles
+        //annoying that it isnt in the same format
+        //Have to remeber this 
+        //if((angle > 30))
+        //{
+        //    angle = 30;
+        //}
+
+        //if (angle < -30)
+        //{
+        //    angle = 330;
+        //}
 
         Debug.Log(power);
 
+        //
+        Quaternion old_rotate = selectedObject.transform.rotation;
+
+
         if (is_being_held == true)
         {
+
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             //Slerping is spherically interpolating
             selectedObject.transform.rotation = Quaternion.Slerp(selectedObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
+
+            //
+            //if(selectedObject.transform.rotation.z >= 330 && selectedObject.transform.rotation.z >= 30)
+            //{
+            //    //Never runs
+            //    selectedObject.transform.rotation = old_rotate;
+            //}
+            //
         }
 
         //Only increases rotation at 135 degrees
 
-        if(selectedObject.transform.eulerAngles.z <= 45 && selectedObject.transform.eulerAngles.z <= 315)
+        if (selectedObject.transform.eulerAngles.z <= 45 && selectedObject.transform.eulerAngles.z <= 315)
         {
             if(curr_point == Cardinal_points.N)
             {
