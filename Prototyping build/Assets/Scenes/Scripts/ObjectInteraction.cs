@@ -12,7 +12,10 @@ public class ObjectInteraction : MonoBehaviour
 
    private Vector3 mousePosition;
    //private Collider2D targetObject;
-   private Vector3 offset;
+   //private Vector3 offset;
+   private bool is_being_held = false;
+   private float startpos_x;
+   private float startpos_y;
    public GameObject selectedObject;
 
     // Update is called once per frame
@@ -22,27 +25,22 @@ public class ObjectInteraction : MonoBehaviour
      * that’s under the mouse whenever the left mouse button is pressed down.*/
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
-
-        //Click and pick up
-
-        if (Input.GetMouseButtonDown(0))
+        if (is_being_held==true)
         {
-            //targetObject = Physics2D.OverlapPoint(mousePosition);
-            //if (targetObject)
-            //{
-                //selectedObject = targetObject.transform.gameObject;
-                offset = selectedObject.transform.position - mousePosition;
-            //}
+            selectedObject.gameObject.transform.localPosition = new Vector3(mousePosition.x - startpos_x, mousePosition.y - startpos_y,0);
         }
+    }
 
-        if (selectedObject)
-        {
-            selectedObject.transform.position = mousePosition + offset;
-        }
+    private void OnMouseDown()
+    {
+        startpos_x = mousePosition.x - selectedObject.transform.localPosition.x;
+        startpos_y = mousePosition.y - selectedObject.transform.localPosition.y;
 
-        if (Input.GetMouseButtonUp(0) && selectedObject)
-        {
-            //selectedObject = null;
-        }
+        is_being_held = true;
+    }
+
+    private void OnMouseUp()
+    {
+        is_being_held = false;
     }
 }
