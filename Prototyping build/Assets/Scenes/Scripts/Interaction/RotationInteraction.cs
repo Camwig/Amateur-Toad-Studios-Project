@@ -32,7 +32,7 @@ public class RotationInteraction : MonoBehaviour
         Vector2 direction = mousePosition - selectedObject.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Debug.Log(rotation);
+        Debug.Log(power);
 
         if (is_being_held == true)
         {
@@ -43,7 +43,7 @@ public class RotationInteraction : MonoBehaviour
 
         //Only increases rotation at 135 degrees
 
-        if(angle >= 45 && angle <= -45)
+        if(selectedObject.transform.eulerAngles.z <= 45 && selectedObject.transform.eulerAngles.z <= 315)
         {
             if(curr_point == Cardinal_points.N)
             {
@@ -68,7 +68,7 @@ public class RotationInteraction : MonoBehaviour
             curr_point = Cardinal_points.E;
         }
 
-        if(angle >= -45 && angle>= -135)
+        if(selectedObject.transform.eulerAngles.z <= 315 && selectedObject.transform.eulerAngles.z >= 225)
         {
             if(curr_point == Cardinal_points.E)
             {
@@ -82,7 +82,7 @@ public class RotationInteraction : MonoBehaviour
         }
 
 
-        if(angle <=-135 && angle >= 135)
+        if(selectedObject.transform.eulerAngles.z >= 135 && selectedObject.transform.eulerAngles.z <= 225)
         {
             //Never true
             if(curr_point==Cardinal_points.S)
@@ -96,7 +96,7 @@ public class RotationInteraction : MonoBehaviour
             curr_point = Cardinal_points.W;
         }
 
-        if(angle >= 135 && angle <= 45)
+        if(selectedObject.transform.eulerAngles.z >= 45 && selectedObject.transform.eulerAngles.z <= 135)
         {
             if (curr_point == Cardinal_points.W)
             {
