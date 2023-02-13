@@ -27,7 +27,15 @@ public class PullieInteraction : MonoBehaviour
         {
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - startpos_y, 0);
         }
-
+        else
+        {
+            //Cant use while loops in update
+            float new_y = Initial_y - selectedObject.gameObject.transform.localPosition.y;
+            if (selectedObject.gameObject.transform.localPosition.y < Initial_y)
+            {
+                selectedObject.gameObject.transform.localPosition += new Vector3(0, 0.01f, 0);
+            }
+        }
 
         if (selectedObject.gameObject.transform.localPosition.y >= Initial_y)
         {
