@@ -24,7 +24,7 @@ public class LeverInteraction : MonoBehaviour
     //    //rotation = 0;
     //}
 
-    void Update()
+void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
 
