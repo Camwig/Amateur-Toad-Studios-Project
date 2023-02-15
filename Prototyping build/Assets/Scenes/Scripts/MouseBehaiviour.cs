@@ -11,6 +11,8 @@ public class MouseBehaiviour : MonoBehaviour
     private SpriteRenderer sprender;
     private LineRenderer line;
     private bool got_pos = false;
+    private float angle;
+    private float roatationSpeed;
 
     private Collider2D targetObject;
 
@@ -34,6 +36,8 @@ public class MouseBehaiviour : MonoBehaviour
         targetObject = null;
 
         offset = new Vector3(0, 0, 2);
+
+        roatationSpeed = 10f;
     }
 
     // Update is called once per frame
@@ -56,8 +60,8 @@ public class MouseBehaiviour : MonoBehaviour
                 //origin_pos = targetObject.transform.position + offset;
                 //origin_pos = selectedObject.gameObject.transform.localPosition;
 
-                offset.x = mousePosition.x - targetObject.transform.position.x;
-                offset.y = mousePosition.y - targetObject.transform.position.y;
+                //offset.x = mousePosition.x - targetObject.transform.position.x;
+                //offset.y = mousePosition.y - targetObject.transform.position.y;
                 //offset = mousePosition - targetObject.transform.position;
 
                 got_pos = true;
@@ -70,9 +74,14 @@ public class MouseBehaiviour : MonoBehaviour
                 //Offset will have to be comparative to where the mouse clicked it
                 /*Vector3 offset = targetObject.transform.position - mousePosition;*/
                 //offset = mousePosition - targetObject.transform.position;
-                origin_pos = new Vector3 (targetObject.transform.position.x /*+ offset.x*/, targetObject.transform.position.y /*+ offset.y*/,1);
+                //line.transform.rotation = targetObject.transform.rotation;
+                origin_pos = new Vector3 (targetObject.transform.position.x + offset.x, targetObject.transform.position.y + offset.y,1);
                 line.SetPosition(0, origin_pos);
                 line.SetPosition(1, selectedObject.gameObject.transform.localPosition);
+
+                Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                //Slerping is spherically interpolating
+                line.transform.rotation = Quaternion.Slerp(targetObject.transform.rotation, rotation, roatationSpeed * Time.deltaTime);
             }
 
             //Draw a line from the current gameobject to the mouse position
