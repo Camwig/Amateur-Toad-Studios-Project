@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RotationInteraction : MonoBehaviour
 {
     private Vector3 mousePosition;
@@ -13,21 +14,23 @@ public class RotationInteraction : MonoBehaviour
     Cardinal_points curr_point;
     private int power;
     private int rotation;
-
     public GameObject selectedObject;
+
+    private float roatationSpeed;
 
     private void Start()
     {
         curr_point = Cardinal_points.E;
         power = 0;
         rotation = 0;
+        roatationSpeed = FrictionSpeed.RotationSpeed;
     }
 
     void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
 
-        float roatationSpeed = 10f;
+        //float roatationSpeed = 10f;
 
         Vector2 direction = mousePosition - selectedObject.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

@@ -8,12 +8,18 @@ public class SliderInteractable : MonoBehaviour
     //Limit it on the y-axis
 
     private Vector3 mousePosition;
+    private float OriginPos;
     //private Collider2D targetObject;
     //private Vector3 offset;
     private bool is_being_held = false;
     // private float startpos_x;
     private float startpos_y;
     public GameObject selectedObject;
+
+    private void Start()
+    {
+        OriginPos = selectedObject.gameObject.transform.localPosition.y;
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,14 +33,14 @@ public class SliderInteractable : MonoBehaviour
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - startpos_y, 0);
         }
 
-        if(selectedObject.gameObject.transform.localPosition.y >= 1.5f)
+        if(selectedObject.gameObject.transform.localPosition.y >= OriginPos)
         {
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, 1.5f, 0);
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
         }
 
-        if (selectedObject.gameObject.transform.localPosition.y <= -1.5f)
+        if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
         {
-            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, -1.5f, 0);
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
         }
     }
 

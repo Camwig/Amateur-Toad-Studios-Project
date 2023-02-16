@@ -10,25 +10,25 @@ public class LeverInteraction : MonoBehaviour
     private Vector3 offset;
     private bool is_being_held = false;
     private float angle;
+    private float roatationSpeed;
     //private enum Cardinal_points { E, S, W, N };
     //Cardinal_points curr_point;
     //private int power;
-   // private int rotation;
+    // private int rotation;
 
     public GameObject selectedObject;
 
-    //private void Start()
-    //{
-    //    //curr_point = Cardinal_points.E;
-    //    //power = 0;
-    //    //rotation = 0;
-    //}
+    private void Start()
+    {
+        //curr_point = Cardinal_points.E;
+        //power = 0;
+        //rotation = 0;
+        roatationSpeed = FrictionSpeed.LeverSpeed;
+    }
 
-void Update()
+    void Update()
     {
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
-
-        float roatationSpeed = 10f;
 
         Vector2 direction = mousePosition - selectedObject.transform.position;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
