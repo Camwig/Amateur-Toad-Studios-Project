@@ -60,6 +60,13 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/iOS/Debug/libAkSoundEngine.a
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/iOS/Release/libAkSoundEngine.a
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/iOS/Profile/libAkSoundEngine.a
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/tvOS/Debug/libAkSoundEngine.a
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/tvOS/Profile/libAkSoundEngine.a
+Econtroller_Build/Assets/Wwise/API/Runtime/Plugins/tvOS/Release/libAkSoundEngine.a
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
