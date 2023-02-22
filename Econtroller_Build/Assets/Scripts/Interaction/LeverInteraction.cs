@@ -16,6 +16,10 @@ public class LeverInteraction : MonoBehaviour
     //private int power;
     // private int rotation;
 
+    [Header("Events")]
+
+    public EventSytem onLeverActivate;
+
     public GameObject selectedObject;
 
     private void Start()
@@ -67,6 +71,15 @@ public class LeverInteraction : MonoBehaviour
             //    selectedObject.transform.rotation = old_rotate;
             //}
             //
+        }
+
+        if(angle >= 20)
+        {
+            onLeverActivate.Raise(this, true);
+        }
+        else if(angle <= 20)
+        {
+            onLeverActivate.Raise(this, false);
         }
 
         //Only increases rotation at 135 degrees

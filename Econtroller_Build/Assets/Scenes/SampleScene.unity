@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6615912241458791819, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: onLeverActivate
+      value: 
+      objectReference: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
     - target: {fileID: 6615912241692152940, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: m_Name
       value: LeverObject
@@ -263,6 +267,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1371776897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6044404076446395949, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
+  m_PrefabInstance: {fileID: 1500033073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1371776898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6044404076446395950, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
+  m_PrefabInstance: {fileID: 1500033073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371776897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707a493607482814ea795a789a1c1d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1371776900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371776897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1371776898}
+        m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
+        m_MethodName: ActivateRoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1380148121
 PrefabInstance:
   m_ObjectHideFlags: 0

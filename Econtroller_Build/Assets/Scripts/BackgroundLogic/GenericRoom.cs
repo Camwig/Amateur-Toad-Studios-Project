@@ -20,8 +20,8 @@ public class GenericRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        curr_state = Room_state.Ending_tracking;
-        Energy = 10;
+        curr_state = Room_state.Inactive;
+        Energy = 0;
         Setting_factors(10.0f, 5.0f);
     }
 
@@ -31,17 +31,22 @@ public class GenericRoom : MonoBehaviour
         Energy_consumption = New_Consumption;
     }
 
-    public void ActivateRoom(bool on_off)
+    public void ActivateRoom(Component sender, object data)
     {
-        if (on_off == true)
+        if (data is bool)
         {
-            curr_state = Room_state.Tracking_energy;
-        }
-        else if(on_off==false)
-        {
-            if(curr_state == Room_state.Tracking_energy)
+            bool on_off = (bool)data;
+
+            if (on_off == true)
             {
-                curr_state = Room_state.Ending_tracking;
+                curr_state = Room_state.Tracking_energy;
+            }
+            else if (on_off == false)
+            {
+                if (curr_state == Room_state.Tracking_energy)
+                {
+                    curr_state = Room_state.Ending_tracking;
+                }
             }
         }
     }
@@ -63,9 +68,13 @@ public class GenericRoom : MonoBehaviour
         {
             case Room_state.Tracking_energy:
                 //Increase energy according to calculation
+                IncreasseEnergy();
+                //Debug.Log(Energy);
                 break;
             case Room_state.Ending_tracking:
                 onEnergyChanged.Raise(this,Energy);
+                Energy = 0;
+                curr_state = Room_state.Inactive;
                 //Stop the track of energy and pass it to the overhead
                 break;
             case Room_state.Inactive:
