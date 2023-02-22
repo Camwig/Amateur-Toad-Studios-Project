@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class GenericRoom : MonoBehaviour
@@ -8,10 +9,13 @@ public class GenericRoom : MonoBehaviour
     public float Energy;
     enum Room_state {Tracking_energy,Inactive,Ending_tracking};
     private Room_state curr_state;
+    private string string_text;
 
 
     public float Rate_of_production;
     public float Energy_consumption;
+
+    public Text textelement;
 
     [Header("Events")]
 
@@ -23,6 +27,7 @@ public class GenericRoom : MonoBehaviour
         curr_state = Room_state.Inactive;
         Energy = 0;
         Setting_factors(10.0f, 5.0f);
+        string_text = "Default";
     }
 
     public void Setting_factors(float New_rate, float New_Consumption)
@@ -64,7 +69,10 @@ public class GenericRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(curr_state)
+        string_text = "Room Energy : " + Energy.ToString();
+        textelement.text = string_text;
+
+        switch (curr_state)
         {
             case Room_state.Tracking_energy:
                 //Increase energy according to calculation

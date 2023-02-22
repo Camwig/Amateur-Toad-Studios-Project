@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Version 1 for the initial milestone
 
@@ -11,12 +12,16 @@ public class Overhead : MonoBehaviour
     //Replace later with clock function
     private float time_;
     private float Overall_Energy;
+    private string string_text;
+
+    public Text textelement;
 
     // Start is called before the first frame update
     void Start()
     {
         time_ = 0;
         Overall_Energy = 0;
+        string_text = "Default";
     }
 
     // Update is called once per frame
@@ -31,7 +36,9 @@ public class Overhead : MonoBehaviour
         if(time_ < 100.0f)
         {
             time_ += Time.deltaTime;
-            Debug.Log(Overall_Energy);
+            //Debug.Log(Overall_Energy);
+            string_text = "Overall Energy : " + Overall_Energy.ToString();
+            textelement.text = string_text;
         }
 
     }
