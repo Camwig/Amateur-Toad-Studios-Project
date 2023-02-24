@@ -10,6 +10,7 @@ public class GenericRoom : MonoBehaviour
     enum Room_state {Tracking_energy,Inactive,Ending_tracking};
     private Room_state curr_state;
     private string string_text;
+    private int IncreaseProduct;
 
 
     public float Rate_of_production;
@@ -28,6 +29,7 @@ public class GenericRoom : MonoBehaviour
         Energy = 0;
         Setting_factors(10.0f, 5.0f);
         string_text = "Default";
+        IncreaseProduct = 1;
     }
 
     public void Setting_factors(float New_rate, float New_Consumption)
@@ -56,6 +58,23 @@ public class GenericRoom : MonoBehaviour
         }
     }
 
+    public void IncreaseProduction(Component sender, object data)
+    {
+        if (data is bool)
+        {
+            bool on_off = (bool)data;
+
+            if(on_off == true)
+            {
+                IncreaseProduct = 10;
+            }
+            else
+            {
+                IncreaseProduct = 1;
+            }
+        }
+    }
+
     public float GiveEnergy(float value)
     {
         return value;
@@ -63,7 +82,7 @@ public class GenericRoom : MonoBehaviour
 
     private void IncreasseEnergy()
     {
-        Energy += 0.1f;
+        Energy += 0.1f * IncreaseProduct;
     }
 
     // Update is called once per frame

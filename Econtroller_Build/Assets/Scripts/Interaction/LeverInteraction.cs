@@ -16,11 +16,11 @@ public class LeverInteraction : MonoBehaviour
     //private int power;
     // private int rotation;
 
+    public GameObject selectedObject;
+
     [Header("Events")]
 
     public EventSytem onLeverActivate;
-
-    public GameObject selectedObject;
 
     private void Start()
     {

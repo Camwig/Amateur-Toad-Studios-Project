@@ -16,6 +16,10 @@ public class SliderInteractable : MonoBehaviour
     private float newpos_y;
     public GameObject selectedObject;
 
+    [Header("Events")]
+
+    public EventSytem onSliderActivate;
+
     private void Start()
     {
         OriginPos = selectedObject.gameObject.transform.localPosition.y;
@@ -35,11 +39,13 @@ public class SliderInteractable : MonoBehaviour
         if(selectedObject.gameObject.transform.localPosition.y >= OriginPos)
         {
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
+            onSliderActivate.Raise(this, false);
         }
 
         if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
         {
             selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+            onSliderActivate.Raise(this, true);
         }
     }
 
