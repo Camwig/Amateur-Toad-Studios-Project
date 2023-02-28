@@ -18,6 +18,10 @@ public class GenericRoom : MonoBehaviour
 
     public Text textelement;
 
+    [Header("Layout")]
+
+    public RoomObject RoomObject_1;
+
     [Header("Events")]
 
     public EventSytem onEnergyChanged;
@@ -30,6 +34,11 @@ public class GenericRoom : MonoBehaviour
         Setting_factors(10.0f, 5.0f);
         string_text = "Default";
         IncreaseProduct = 1;
+
+        for(int i=0; i< RoomObject_1.List_of_object.Length;i++)
+        {
+            Instantiate(RoomObject_1.List_of_object[i].LoadedPrefab, new Vector3(RoomObject_1.List_of_object[i].Position.x, RoomObject_1.List_of_object[i].Position.y, 0), Quaternion.identity, transform);
+        }
     }
 
     public void Setting_factors(float New_rate, float New_Consumption)
