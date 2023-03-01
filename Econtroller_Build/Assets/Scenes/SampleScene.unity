@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!95 &112970188 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6331493050333806434, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
-  m_PrefabInstance: {fileID: 2103894087657243275}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &150819215
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +576,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951089785}
   m_CullTransparentMesh: 1
+--- !u!95 &995635438 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6331493050333806434, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+  m_PrefabInstance: {fileID: 2103894087657243275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014868735
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,8 +917,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 112970188}
+  transition: {fileID: 995635438}
   transitionTime: 1
+  new_loader: {fileID: 1975913702}
+  SceneID: 2
 --- !u!114 &1587661510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,7 +968,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1587661509}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: MoveToScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1065,8 +1067,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd926b70ed9afb4d8c1c39f394b8b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 112970188}
+  transition: {fileID: 995635438}
   transitionTime: 1
+  new_loader: {fileID: 0}
+  SceneID: 1
 --- !u!114 &1806202808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,7 +1118,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1806202807}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: MoveToScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1161,6 +1165,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806202805}
   m_CullTransparentMesh: 1
+--- !u!95 &1942455444 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4088752169276263585, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+  m_PrefabInstance: {fileID: 2103894087657243275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975913702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 585987086539681795, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+  m_PrefabInstance: {fileID: 2103894087657243275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96881dca99a4d5e4fa5d22b64f7df550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2135190226 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8814598976916418476, guid: 52797dccb9f5167418cd2f74433356a1, type: 3}
@@ -1322,7 +1342,7 @@ PrefabInstance:
     - target: {fileID: 4938489015270937115, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 112970188}
+      objectReference: {fileID: 1942455444}
     - target: {fileID: 6796901052663629227, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1373,6 +1393,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796901052663629227, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051074162417592256, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

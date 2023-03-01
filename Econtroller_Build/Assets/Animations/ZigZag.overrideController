@@ -7,9 +7,9 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ZigZag
-  m_Controller: {fileID: 9100000, guid: 2d0680aad5a774247a111ead90f030bc, type: 2}
+  m_Controller: {fileID: 9100000, guid: e3b9669585cb3ec47879a8863579dd33, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: d8f80a1cba3771948b2bd86a5e2962f3, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 5569d4340217ae94f93cf4b61d8d3033, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 1e204ee8abd156e4bbf8005b7492ee79, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2570a945374fba548b9c42b3cd563faa, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 14bf2403d52411747852313ed9f5cec8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 52605fae30cb5d649902efa6175409fc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5569d4340217ae94f93cf4b61d8d3033, type: 2}

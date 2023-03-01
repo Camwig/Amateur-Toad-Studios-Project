@@ -455,7 +455,7 @@ MonoBehaviour:
       - m_Target: {fileID: 695512052}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: MoveToScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -516,6 +516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1321059916}
   transitionTime: 1
+  new_loader: {fileID: 1321059917}
+  SceneID: 0
 --- !u!1 &712558817
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +680,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6331493050333806434, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
   m_PrefabInstance: {fileID: 1321059915}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1321059917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 585987086539681795, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+  m_PrefabInstance: {fileID: 1321059915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96881dca99a4d5e4fa5d22b64f7df550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810819435
 GameObject:
   m_ObjectHideFlags: 0

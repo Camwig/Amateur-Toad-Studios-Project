@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class LevelLoader : MonoBehaviour
 {
 
     public Animator transition;
 
     public float transitionTime = 1f;
 
-    public LevelLoader new_loader;
+    // Update is called once per frame
+    void Update()
+    {
+       // if (Input.GetKeyDown(KeyCode.Space))
+      //  {
+       //     LoadNextLevel();
+       // }
+        
+    }
 
-    public int SceneID;
-
-    public void MoveToScene()
+    public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
@@ -25,7 +31,6 @@ public class ChangeScene : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(SceneID);
+        SceneManager.LoadScene(levelIndex);
     }
-
 }
