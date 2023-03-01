@@ -148,6 +148,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 150819215}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1502,6 +1503,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+=======
   m_SourcePrefab: {fileID: 100100000, guid: 916c6bc8875f0894db8d4975edc32f22, type: 3}
 --- !u!1001 &8814598976098239870
 PrefabInstance:
@@ -1520,7 +1522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8814598976916418476, guid: 52797dccb9f5167418cd2f74433356a1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8814598976916418476, guid: 52797dccb9f5167418cd2f74433356a1, type: 3}
       propertyPath: m_AnchorMax.x
