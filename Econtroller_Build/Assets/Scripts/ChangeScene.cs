@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-   public void MoveToScene(int SceneID)
+
+    public Animator transition;
+
+    public float transitionTime = 1f;
+
+    public void MoveToScene(int SceneID)
     {
+       // transition.SetTrigger("Start");
+
+      //  new WaitForSeconds(transitionTime);
+
         SceneManager.LoadScene(SceneID);
     }
+
 }
