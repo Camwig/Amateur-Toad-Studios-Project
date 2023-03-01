@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b97cd591398574484be826abdd692b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textelement: {fileID: 0}
+  energyTrack: {fileID: 11400000, guid: de4f47e70e814cd4aa64a000e94b1ca5, type: 2}
+  energyTrack2: {fileID: 11400000, guid: 428e0687dc49f9d4ba09d8b4527be9af, type: 2}
 --- !u!114 &6223416667895183709
 MonoBehaviour:
   m_ObjectHideFlags: 0

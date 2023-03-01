@@ -8,6 +8,9 @@ public class MainManager : MonoBehaviour
 
     private float NewEnergy;
 
+    [SerializeField]
+    private EnergyTracker energyTrack;
+
     //private void Awake()
     //{
     //    if(Instance != null)
@@ -25,6 +28,8 @@ public class MainManager : MonoBehaviour
         if(data is float)
         {
             NewEnergy = (float)data;
+            energyTrack.EnergyProperty = NewEnergy;
+            PlayerPrefs.SetFloat("Energy", NewEnergy);
         }
     }
 

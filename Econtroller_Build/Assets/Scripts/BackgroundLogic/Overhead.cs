@@ -18,6 +18,11 @@ public class Overhead : MonoBehaviour
 
     public static Overhead New_Instance;
 
+    [SerializeField]
+    private EnergyTracker energyTrack;
+    [SerializeField]
+    private EnergyTracker energyTrack2;
+
     //private void Awake()
     //{
     //    if (New_Instance != null)
@@ -34,8 +39,14 @@ public class Overhead : MonoBehaviour
     void Start()
     {
         time_ = 0;
-        Overall_Energy = 0;
+        //Overall_Energy =0;
         string_text = "Default";
+        Overall_Energy = energyTrack2.EnergyProperty;
+        Overall_Energy += energyTrack.EnergyProperty;
+        energyTrack2.EnergyProperty = Overall_Energy;
+
+        Overall_Energy = PlayerPrefs.GetFloat("Overall_energy");
+        Overall_Energy += PlayerPrefs.GetFloat("Energy");
     }
 
     // Update is called once per frame
@@ -62,6 +73,12 @@ public class Overhead : MonoBehaviour
             textelement.text = string_text;
         }
 
+        //Overall_Energy += energyTrack.EnergyProperty;
+
+        PlayerPrefs.SetFloat("Overall_energy", Overall_Energy);
+
+        //Overall_Energy += energyTrack.EnergyProperty;
+        //energyTrack2.EnergyProperty = Overall_Energy;
     }
 
 
@@ -73,6 +90,11 @@ public class Overhead : MonoBehaviour
             Overall_Energy += energy;
             //Debug.Log("ASASHSAJBSh\n");
         }
+    }
+
+    public void SetEnergy(float new_value)
+    {
+        Overall_Energy = new_value;
     }
 
 
