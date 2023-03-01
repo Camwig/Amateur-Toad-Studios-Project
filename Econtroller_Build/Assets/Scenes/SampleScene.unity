@@ -163,10 +163,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -199,8 +199,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 81}
-  m_SizeDelta: {x: 236.09, y: 45.74}
+  m_AnchoredPosition: {x: 0.000030518, y: -0.0000019073}
+  m_SizeDelta: {x: 884.09, y: 261.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &287329983
 PrefabInstance:
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 148.18}
-  m_SizeDelta: {x: 236.09, y: 45.74}
+  m_AnchoredPosition: {x: 0.00015449524, y: 363.81}
+  m_SizeDelta: {x: 878.12, y: 252.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594051589
 MonoBehaviour:
@@ -774,7 +774,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
