@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room4.unity
     guid: 72346e102f5cbae4cbcc496ae4915acf
+  - enabled: 1
+    path: Assets/Scenes/Email.unity
+    guid: 460db1104db104f469d936f9ea9b6f6e
   m_configObjects: {}
