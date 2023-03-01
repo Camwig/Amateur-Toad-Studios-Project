@@ -18,9 +18,9 @@ public class GenericRoom : MonoBehaviour
 
     public Text textelement;
 
-    [Header("Layout")]
+    //[Header("Layout")]
 
-    public RoomObject RoomObject_1;
+    //public RoomObject RoomObject_1;
 
     [Header("Events")]
 
@@ -35,10 +35,10 @@ public class GenericRoom : MonoBehaviour
         string_text = "Default";
         IncreaseProduct = 1;
 
-        for(int i=0; i< RoomObject_1.List_of_object.Length;i++)
-        {
-            Instantiate(RoomObject_1.List_of_object[i].LoadedPrefab, new Vector3(RoomObject_1.List_of_object[i].Position.x, RoomObject_1.List_of_object[i].Position.y, 0), Quaternion.identity, transform);
-        }
+        //for(int i=0; i< RoomObject_1.List_of_object.Length;i++)
+        //{
+        //    Instantiate(RoomObject_1.List_of_object[i].LoadedPrefab, new Vector3(RoomObject_1.List_of_object[i].Position.x, RoomObject_1.List_of_object[i].Position.y, 0), Quaternion.identity, transform);
+        //}
     }
 
     public void Setting_factors(float New_rate, float New_Consumption)
