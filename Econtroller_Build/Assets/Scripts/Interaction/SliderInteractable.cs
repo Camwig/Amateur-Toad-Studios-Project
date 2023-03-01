@@ -17,9 +17,12 @@ public class SliderInteractable : MonoBehaviour
     private float newpos_y;
     //public GameObject selectedObject;
 
+    private enum slide_state {Down,Up,Down_active,Up_active,None};
+    private slide_state curr_state;
+
     [Header("Events")]
 
-    private EventSytem onSliderActivate;
+    public static EventSytem onSliderActivate;
 
     private void Start()
     {
@@ -29,10 +32,11 @@ public class SliderInteractable : MonoBehaviour
         //Need to load it as a script asset
         //onSliderActivate = (EventSytem)Resources.Load("Assets/Scenes/Data/Events/ProductRateRaised.asset");
         onSliderActivate = Resources.Load<EventSytem>("ProductRateRaised");
-        //if(onSliderActivate == null)
+        //if (onSliderActivate == null)
         //{
         //    int i = 0;
         //}
+        curr_state = slide_state.None;
         //EventSytem.CreateInstance("Room Activate.asset");
         //AssetDatabase.CreateAsset(new_event, "Assets/Scenes/Data/Events/MyEvent");
     }
@@ -48,16 +52,43 @@ public class SliderInteractable : MonoBehaviour
             this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
         }
 
+        if(this.gameObject.transform.localPosition.y < OriginPos && this.gameObject.transform.localPosition.y > OriginPos - 1.5f)
+        {
+            curr_state = slide_state.None;
+        }
+
         if(this.gameObject.transform.localPosition.y >= OriginPos)
         {
             this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, OriginPos, 0);
-            onSliderActivate.Raise(this, false);
+            if (curr_state == slide_state.None)
+            {
+                curr_state = slide_state.Up;
+            }
         }
 
         if (this.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
         {
             this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+            if (curr_state == slide_state.None)
+            {
+                curr_state = slide_state.Down;
+            }
+        }
+
+        CheckState();
+    }
+
+    private void CheckState()
+    {
+        if(curr_state == slide_state.Up)
+        {
+            onSliderActivate.Raise(this, false);
+            curr_state = slide_state.Up_active;
+        }
+        else if(curr_state == slide_state.Down)
+        {
             onSliderActivate.Raise(this, true);
+            curr_state = slide_state.Down_active;
         }
     }
 

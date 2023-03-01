@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Object1
   m_EditorClassIdentifier: 
   Position: {x: 0, y: 0, z: 0}
-  LoadedPrefab: {fileID: 4199353688966251355, guid: 89d108c2bef7cdf41ad2982c9b633152, type: 3}
+  LoadedPrefab: {fileID: 8050844338759452743, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
