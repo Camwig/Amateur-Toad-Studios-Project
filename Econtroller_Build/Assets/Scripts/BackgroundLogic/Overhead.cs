@@ -16,6 +16,20 @@ public class Overhead : MonoBehaviour
 
     public Text textelement;
 
+    public static Overhead New_Instance;
+
+    //private void Awake()
+    //{
+    //    if (New_Instance != null)
+    //    {
+    //        Destroy(gameObject);
+    //        return;
+    //    }
+
+    //    New_Instance = this;
+    //    DontDestroyOnLoad(gameObject);
+    //}
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +46,13 @@ public class Overhead : MonoBehaviour
         //How much energy consumed
 
         //While it is not the end of the day keep tracking the energy
+
+        //if(MainManager.Instance != null)
+        //{
+        //    Overall_Energy += MainManager.Instance.ReturnEnergy();
+        //    MainManager.Instance = null;
+        //    Destroy(            MainManager.Instance);
+        //}
 
         if(time_ < 100.0f)
         {
