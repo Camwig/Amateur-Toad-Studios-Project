@@ -543,6 +543,22 @@ PrefabInstance:
       propertyPath: energyTrack2
       value: 
       objectReference: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
+    - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Overhead, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6223416667895183710, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: m_Name
       value: Overhead

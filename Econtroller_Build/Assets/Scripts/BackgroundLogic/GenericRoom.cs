@@ -32,8 +32,7 @@ public class GenericRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        curr_state = Room_state.Inactive;
-        Energy = 0;
+        //Energy = 0;
         Setting_factors(10.0f, 5.0f);
         string_text = "Default";
         IncreaseProduct = 1;
@@ -53,6 +52,20 @@ public class GenericRoom : MonoBehaviour
     {
         Rate_of_production = New_rate;
         Energy_consumption = New_Consumption;
+    }
+
+    public void SetupState()
+    {
+        curr_state = Room_state.Inactive;
+        Energy = 0;
+    }
+
+    public void SetupInitialEnergy(Component sender, object data)
+    {
+       if(data is float)
+        {
+            Energy = (float)data;
+        }
     }
 
     public void ActivateRoom(Component sender, object data)

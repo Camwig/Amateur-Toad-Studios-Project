@@ -9,12 +9,14 @@ public class LeverInteraction : MonoBehaviour
     private Collider2D targetObject;
     private Vector3 offset;
     private bool is_being_held = false;
-    private float angle;
+    private static float angle;
     private float roatationSpeed;
     //private enum Cardinal_points { E, S, W, N };
     //Cardinal_points curr_point;
     //private int power;
     // private int rotation;
+
+    public ObjectPositioing these_objects;
 
     public GameObject selectedObject;
 
@@ -93,5 +95,11 @@ public class LeverInteraction : MonoBehaviour
     private void OnMouseUp()
     {
         is_being_held = false;
+    }
+
+    private void OnDestroy()
+    {
+        these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
+        these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
     }
 }

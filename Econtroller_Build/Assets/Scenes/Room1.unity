@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 136802344537da241b1b0522e75cac83, type: 2}
     - target: {fileID: 6044404076446395951, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6044404076446395951, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,6 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010f4e3ab9770d240b5658067e40cc64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheckActivation: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
+  SetupEnergy: {fileID: 11400000, guid: acdfdc004f547064aa57d865263cf283, type: 2}
   energyTrack: {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
 --- !u!114 &339181972
 MonoBehaviour:
@@ -628,7 +630,7 @@ RectTransform:
   m_Children:
   - {fileID: 422560948}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -961,7 +963,7 @@ RectTransform:
   m_Children:
   - {fileID: 695512048}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -988,6 +990,10 @@ PrefabInstance:
       value: -1.29
       objectReference: {fileID: 0}
     - target: {fileID: 6615912241458791819, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+      propertyPath: these_objects
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+    - target: {fileID: 6615912241458791819, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: onLeverActivate
       value: 
       objectReference: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
@@ -997,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615912241692152943, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6615912241692152943, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1041,6 +1047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+--- !u!1 &753724419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6615912241692152940, guid: a0f26304e7a7cab42b9e9884f340d316, type: 3}
+  m_PrefabInstance: {fileID: 753724418}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1167137078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6044404076446395949, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
@@ -1057,7 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707a493607482814ea795a789a1c1d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1167137081
+--- !u!114 &1167137080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1076,6 +1087,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1167137079}
         m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
         m_MethodName: ActivateRoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1167137081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167137078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: acdfdc004f547064aa57d865263cf283, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1167137079}
+        m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
+        m_MethodName: SetupInitialEnergy
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1162,6 +1201,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96881dca99a4d5e4fa5d22b64f7df550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1615188813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615188815}
+  - component: {fileID: 1615188814}
+  m_Layer: 0
+  m_Name: GenericRoom Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615188814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615188813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1d260b0957b0e4e93ede9225e24ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever: {fileID: 753724419}
+  these_objects: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+  this_room: {fileID: 1167137079}
+  energyTracker: {fileID: 11400000, guid: 527e1e90e278939409c59d4b2c6deda5, type: 2}
+--- !u!4 &1615188815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615188813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3509908, y: -6.199024, z: -77.48383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810819435
 GameObject:
   m_ObjectHideFlags: 0

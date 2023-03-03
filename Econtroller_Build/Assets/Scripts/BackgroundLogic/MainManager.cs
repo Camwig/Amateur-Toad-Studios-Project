@@ -9,6 +9,12 @@ public class MainManager : MonoBehaviour
     private float NewEnergy;
 
     [SerializeField]
+    public EventSytem CheckActivation;
+
+    [SerializeField]
+    public EventSytem SetupEnergy;
+
+    [SerializeField]
     private EnergyTracker energyTrack;
 
     //private void Awake()
@@ -22,6 +28,16 @@ public class MainManager : MonoBehaviour
     //    Instance = this;
     //    DontDestroyOnLoad(gameObject);
     //}
+
+    private void Awake()
+    {
+        //CheckActivation.Raise(this, energyTrack.ActivatedProperty);
+
+        //if(energyTrack.ActivatedProperty == true)
+        //{
+        //    SetupEnergy.Raise(this, energyTrack.EnergyProperty);
+        //}
+    }
 
     public void Addenergy(Component sender, object data)
     {

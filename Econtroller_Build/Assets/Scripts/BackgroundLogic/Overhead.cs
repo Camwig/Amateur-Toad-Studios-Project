@@ -80,7 +80,8 @@ public class Overhead : MonoBehaviour
         switch (energyTrack.ActivatedProperty)
         {
             case true:
-                Overall_Energy += 0.1f * energyTrack.IncreaseProperty;
+                energyTrack.EnergyProperty += 0.1f * energyTrack.IncreaseProperty;
+                Overall_Energy = energyTrack.EnergyProperty;
                 energyTrack2.EnergyProperty = Overall_Energy;
                 break;
             case false:
