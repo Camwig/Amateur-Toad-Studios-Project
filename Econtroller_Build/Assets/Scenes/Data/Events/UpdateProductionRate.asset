@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfaf352a4bcd178459f064b38258597a, type: 3}
-  m_Name: TestEvent
+  m_Name: UpdateProductionRate
   m_EditorClassIdentifier: 
   Listeners: []

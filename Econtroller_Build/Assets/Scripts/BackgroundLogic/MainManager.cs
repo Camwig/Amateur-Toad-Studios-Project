@@ -29,7 +29,23 @@ public class MainManager : MonoBehaviour
         {
             NewEnergy = (float)data;
             energyTrack.EnergyProperty = NewEnergy;
-            PlayerPrefs.SetFloat("Energy", NewEnergy);
+            //PlayerPrefs.SetFloat("Energy", NewEnergy);
+        }
+    }
+
+    public void SetRoomOn(Component sender, object data)
+    {
+        if(data is bool)
+        {
+            energyTrack.ActivatedProperty = (bool)data;
+        }
+    }
+
+    public void SetRoomIncriment(Component sender, object data)
+    {
+       if(data is float)
+        {
+            energyTrack.IncreaseProperty = (float)data;
         }
     }
 

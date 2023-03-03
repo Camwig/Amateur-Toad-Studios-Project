@@ -45,8 +45,8 @@ public class Overhead : MonoBehaviour
         Overall_Energy += energyTrack.EnergyProperty;
         energyTrack2.EnergyProperty = Overall_Energy;
 
-        Overall_Energy = PlayerPrefs.GetFloat("Overall_energy");
-        Overall_Energy += PlayerPrefs.GetFloat("Energy");
+       // Overall_Energy = PlayerPrefs.GetFloat("Overall_energy");
+        //Overall_Energy += PlayerPrefs.GetFloat("Energy");
     }
 
     // Update is called once per frame
@@ -75,7 +75,18 @@ public class Overhead : MonoBehaviour
 
         //Overall_Energy += energyTrack.EnergyProperty;
 
-        PlayerPrefs.SetFloat("Overall_energy", Overall_Energy);
+        //PlayerPrefs.SetFloat("Overall_energy", Overall_Energy);
+
+        switch (energyTrack.ActivatedProperty)
+        {
+            case true:
+                Overall_Energy += 0.1f * energyTrack.IncreaseProperty;
+                energyTrack2.EnergyProperty = Overall_Energy;
+                break;
+            case false:
+                energyTrack2.EnergyProperty = Overall_Energy;
+                break;
+        }
 
         //Overall_Energy += energyTrack.EnergyProperty;
         //energyTrack2.EnergyProperty = Overall_Energy;

@@ -217,6 +217,14 @@ PrefabInstance:
       propertyPath: textelement
       value: 
       objectReference: {fileID: 422560949}
+    - target: {fileID: 6044404076446395950, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
+      propertyPath: onActivation
+      value: 
+      objectReference: {fileID: 11400000, guid: a4f0875b52f3ff3488625c47d81d4546, type: 2}
+    - target: {fileID: 6044404076446395950, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
+      propertyPath: UpdateProductionRate
+      value: 
+      objectReference: {fileID: 11400000, guid: 136802344537da241b1b0522e75cac83, type: 2}
     - target: {fileID: 6044404076446395951, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -300,6 +308,62 @@ MonoBehaviour:
       - m_Target: {fileID: 339181971}
         m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
         m_MethodName: Addenergy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &339181973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339181970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 136802344537da241b1b0522e75cac83, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 339181971}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: SetRoomIncriment
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &339181974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339181970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a4f0875b52f3ff3488625c47d81d4546, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 339181971}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: SetRoomOn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

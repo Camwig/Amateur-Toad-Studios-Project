@@ -12,7 +12,6 @@ public class GenericRoom : MonoBehaviour
     private string string_text;
     private int IncreaseProduct;
 
-
     public float Rate_of_production;
     public float Energy_consumption;
 
@@ -25,6 +24,10 @@ public class GenericRoom : MonoBehaviour
     [Header("Events")]
 
     public EventSytem onEnergyChanged;
+
+    public EventSytem onActivation;
+
+    public EventSytem UpdateProductionRate;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,11 @@ public class GenericRoom : MonoBehaviour
         //{
         //    Instantiate(RoomObject_1.List_of_object[i].LoadedPrefab, new Vector3(RoomObject_1.List_of_object[i].Position.x, RoomObject_1.List_of_object[i].Position.y, 0), Quaternion.identity, transform);
         //}
+    }
+
+    private void Awake()
+    {
+        UpdateProductionRate.Raise(this, IncreaseProduct);
     }
 
     public void Setting_factors(float New_rate, float New_Consumption)
@@ -81,6 +89,7 @@ public class GenericRoom : MonoBehaviour
             {
                 IncreaseProduct = 1;
             }
+            UpdateProductionRate.Raise(this, IncreaseProduct);
         }
     }
 
@@ -100,15 +109,20 @@ public class GenericRoom : MonoBehaviour
         string_text = "Room Energy : " + Energy.ToString();
         textelement.text = string_text;
 
+        //UpdateProductionRate.Raise(this, IncreaseProduct);
+
         switch (curr_state)
         {
             case Room_state.Tracking_energy:
                 //Increase energy according to calculation
                 IncreasseEnergy();
+                onEnergyChanged.Raise(this, Energy);
+                onActivation.Raise(this, true);
                 //Debug.Log(Energy);
                 break;
             case Room_state.Ending_tracking:
-                onEnergyChanged.Raise(this,Energy);
+                //onEnergyChanged.Raise(this,Energy);
+                onActivation.Raise(this, false);
                 Energy = 0;
                 curr_state = Room_state.Inactive;
                 //Stop the track of energy and pass it to the overhead

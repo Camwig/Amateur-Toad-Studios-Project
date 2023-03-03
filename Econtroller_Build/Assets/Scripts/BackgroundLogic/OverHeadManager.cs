@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OverHeadManager : MonoBehaviour
 {
-    static private OverHeadManager Instance = null;
+    //static private OverHeadManager Instance = null;
     public Overhead overhead_;
     public EnergyTracker energyTrack;
     public EnergyTracker energyTrack2;
@@ -57,11 +57,19 @@ public class OverHeadManager : MonoBehaviour
         if(firstPlay == true)
         {
             Debug.Log("Starting...\n");
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
 
             overhead_.SetEnergy(0);
-            PlayerPrefs.SetFloat("Overall_energy", 0);
-            PlayerPrefs.SetFloat("Energy", 0);
+            //PlayerPrefs.SetFloat("Overall_energy", 0);
+            //PlayerPrefs.SetFloat("Energy", 0);
+
+            energyTrack.EnergyProperty = 0;
+            energyTrack2.EnergyProperty = 0;
+            energyTrack.IncreaseProperty = 1;
+            energyTrack2.IncreaseProperty = 1;
+            energyTrack.ActivatedProperty = false;
+            energyTrack2.ActivatedProperty = false;
+
             firstPlay = false;
         }
         else
