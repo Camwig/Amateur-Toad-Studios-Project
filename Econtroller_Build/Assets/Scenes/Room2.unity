@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: this_room
       value: 
       objectReference: {fileID: 915038536}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: energyTracker
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
     - target: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: m_Name
       value: GenericRoom Manager
