@@ -8,6 +8,7 @@ public class OverHeadManager : MonoBehaviour
     public Overhead overhead_;
     public EnergyTracker energyTrack;
     public EnergyTracker energyTrack2;
+    public EnergyTracker energyTrack3;
 
    private static bool firstPlay=true;
 
@@ -65,10 +66,13 @@ public class OverHeadManager : MonoBehaviour
 
             energyTrack.EnergyProperty = 0;
             energyTrack2.EnergyProperty = 0;
+            energyTrack3.EnergyProperty = 0;
             energyTrack.IncreaseProperty = 1;
             energyTrack2.IncreaseProperty = 1;
+            energyTrack3.IncreaseProperty = 1;
             energyTrack.ActivatedProperty = false;
             energyTrack2.ActivatedProperty = false;
+            energyTrack3.ActivatedProperty = false;
 
             firstPlay = false;
         }
