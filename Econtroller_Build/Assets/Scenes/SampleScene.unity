@@ -543,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 6223416667895183708, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: energyTrack2
       value: 
+      objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
+    - target: {fileID: 6223416667895183708, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
+      propertyPath: OriginEnergyTrack
+      value: 
       objectReference: {fileID: 11400000, guid: 5477da96b26a65a449cc546ee711cc81, type: 2}
     - target: {fileID: 6223416667895183709, guid: a71b7ede1ca5d7d4bbd20ed9913a1ee0, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size

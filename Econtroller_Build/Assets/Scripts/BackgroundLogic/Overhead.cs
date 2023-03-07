@@ -18,8 +18,19 @@ public class Overhead : MonoBehaviour
 
     public static Overhead New_Instance;
 
+    //Need a variable to track the overall amount for each room rather than adding it
+    // to the main overall as that is just going to combine their outputs
+
+    //Plan is to keep track of each energy tracker that is attached to a room in an array
+
+    //private float EnergyRoom1;
+    //private float EnergyRoom2;
+    private float additive;
+
     [SerializeField]
     private EnergyTracker energyTrack;
+    [SerializeField]
+    private EnergyTracker OriginEnergyTrack;
     [SerializeField]
     private EnergyTracker energyTrack2;
 
@@ -41,9 +52,32 @@ public class Overhead : MonoBehaviour
         time_ = 0;
         //Overall_Energy =0;
         string_text = "Default";
-        Overall_Energy = energyTrack2.EnergyProperty;
+
+        //EnergyRoom1 = energyTrack.EnergyProperty;
+        //EnergyRoom2 = energyTrack2.EnergyProperty;
+        additive = 0;
+
+        Overall_Energy = OriginEnergyTrack.EnergyProperty;
+
+        
+
+        //Once its been added I need to clear the added energy property especially if it is off
+
         Overall_Energy += energyTrack.EnergyProperty;
-        energyTrack2.EnergyProperty = Overall_Energy;
+
+        Overall_Energy += energyTrack2.EnergyProperty;
+
+        if (!energyTrack.ActivatedProperty)
+        {
+            energyTrack.EnergyProperty = 0;
+        }
+
+        if (!energyTrack2.ActivatedProperty)
+        {
+            energyTrack2.EnergyProperty = 0;
+        }
+
+        OriginEnergyTrack.EnergyProperty = Overall_Energy;
 
        // Overall_Energy = PlayerPrefs.GetFloat("Overall_energy");
         //Overall_Energy += PlayerPrefs.GetFloat("Energy");
@@ -77,17 +111,51 @@ public class Overhead : MonoBehaviour
 
         //PlayerPrefs.SetFloat("Overall_energy", Overall_Energy);
 
-        switch (energyTrack.ActivatedProperty)
+        //Loop through each item in enrgy tracker array
+
+        //switch (energyTrack.ActivatedProperty)
+        //{
+        //    case true:
+        //        //Calculate the additive
+        //        additive += 0.1f * energyTrack.IncreaseProperty;
+
+
+        //        //energyTrack.EnergyProperty += 0.1f * energyTrack.IncreaseProperty;
+
+
+        //        //Add it to the energy of the room and the overall seperatley
+
+        //        Overall_Energy += additive;
+        //        energyTrack.EnergyProperty += additive;
+
+        //        //Overall_Energy = energyTrack.EnergyProperty;
+
+
+        //        //OriginEnergyTrack.EnergyProperty = Overall_Energy;
+        //        break;
+        //    case false:
+        //        OriginEnergyTrack.EnergyProperty = Overall_Energy;
+        //        break;
+        //}
+
+        if(energyTrack.ActivatedProperty == true)
         {
-            case true:
-                energyTrack.EnergyProperty += 0.1f * energyTrack.IncreaseProperty;
-                Overall_Energy = energyTrack.EnergyProperty;
-                energyTrack2.EnergyProperty = Overall_Energy;
-                break;
-            case false:
-                energyTrack2.EnergyProperty = Overall_Energy;
-                break;
+            //Calculate the additive
+            additive = 0.1f * energyTrack.IncreaseProperty;
+            //Add it to the energy of the room and the overall seperatley
+            Overall_Energy += additive;
+            energyTrack.EnergyProperty += additive;
         }
+
+        if (energyTrack2.ActivatedProperty ==true)
+        {
+            additive = 0.1f * energyTrack2.IncreaseProperty;
+            Overall_Energy += additive;
+            energyTrack2.EnergyProperty += additive;
+        }
+
+        OriginEnergyTrack.EnergyProperty = Overall_Energy;
+
 
         //Overall_Energy += energyTrack.EnergyProperty;
         //energyTrack2.EnergyProperty = Overall_Energy;

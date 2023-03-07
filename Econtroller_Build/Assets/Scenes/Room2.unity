@@ -186,6 +186,10 @@ PrefabInstance:
       propertyPath: energyTracker
       value: 
       objectReference: {fileID: 11400000, guid: a8b94b50010984b4dbc93001e0ef6b20, type: 2}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: these_objects
+      value: 
+      objectReference: {fileID: 11400000, guid: add6e1cc0b44e2648bcc6709efc532c5, type: 2}
     - target: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: m_Name
       value: GenericRoom Manager
@@ -587,6 +591,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407830969}
   m_CullTransparentMesh: 1
+--- !u!1 &415356936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6044404076446395949, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
+  m_PrefabInstance: {fileID: 1088114355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &415356937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415356936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: acdfdc004f547064aa57d865263cf283, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 915038536}
+        m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
+        m_MethodName: SetupInitialEnergy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &415356938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415356936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b42c5960776072408bceef290c45f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 915038536}
+        m_TargetAssemblyTypeName: GenericRoom, Assembly-CSharp
+        m_MethodName: ActivateRoom
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &584628120
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +757,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6044404076446395950, guid: d7d43232968191e4d9827d76e048edd8, type: 3}
   m_PrefabInstance: {fileID: 1088114355}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 415356936}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 707a493607482814ea795a789a1c1d11, type: 3}
@@ -978,8 +1043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -85.175}
-  m_SizeDelta: {x: 791.58, y: 170.35}
+  m_AnchoredPosition: {x: 14.26, y: -85.175}
+  m_SizeDelta: {x: 1243.8, y: 170.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114290050
 MonoBehaviour:

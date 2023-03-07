@@ -141,6 +141,7 @@ public class GenericRoom : MonoBehaviour
                 //Stop the track of energy and pass it to the overhead
                 break;
             case Room_state.Inactive:
+                //onEnergyChanged.Raise(this, 0);
                 //Idle
                 break;
         }

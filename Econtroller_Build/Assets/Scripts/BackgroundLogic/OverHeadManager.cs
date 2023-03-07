@@ -10,7 +10,16 @@ public class OverHeadManager : MonoBehaviour
     public EnergyTracker energyTrack2;
     public EnergyTracker energyTrack3;
 
-   private static bool firstPlay=true;
+    public static float energyTrack_amount;
+    public static float energyTrack2_amount;
+    public static float energyTrack3_amount;
+
+
+    public float new_energyTrack_amount;
+    public float new_energyTrack2_amount;
+    public float new_energyTrack3_amount;
+
+    private static bool firstPlay=true;
 
 
     void Awake()
@@ -74,11 +83,53 @@ public class OverHeadManager : MonoBehaviour
             energyTrack2.ActivatedProperty = false;
             energyTrack3.ActivatedProperty = false;
 
+            energyTrack_amount = 0.0f;
+            energyTrack2_amount = 0.0f;
+            energyTrack3_amount = 0.0f;
+
             firstPlay = false;
         }
         else
         {
             Debug.Log("Running...\n");
+
+            if (!energyTrack.ActivatedProperty)
+            {
+                if (energyTrack.EnergyProperty > energyTrack_amount)
+                {
+                    Debug.Log(energyTrack.EnergyProperty);
+                    //Not doing anything
+                    new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
+                    energyTrack.EnergyProperty = new_energyTrack_amount;
+                    Debug.Log(energyTrack.EnergyProperty);
+                }
+            }
+
+            if (!energyTrack2.ActivatedProperty)
+            {
+                if (energyTrack2.EnergyProperty > energyTrack2_amount)
+                {
+                    new_energyTrack2_amount = energyTrack2.EnergyProperty - energyTrack2_amount;
+                    energyTrack2.EnergyProperty = new_energyTrack2_amount;
+                }
+            }
+
+            if (!energyTrack3.ActivatedProperty)
+            {
+
+                if (energyTrack3.EnergyProperty > energyTrack3_amount)
+                {
+                    new_energyTrack3_amount = energyTrack3.EnergyProperty - energyTrack3_amount;
+                    energyTrack3.EnergyProperty = new_energyTrack3_amount;
+                }
+            }
         }
+    }
+
+    private void OnDestroy()
+    {
+        energyTrack_amount = energyTrack.EnergyProperty;
+        energyTrack2_amount = energyTrack2.EnergyProperty;
+        energyTrack3_amount = energyTrack3.EnergyProperty;
     }
 }
