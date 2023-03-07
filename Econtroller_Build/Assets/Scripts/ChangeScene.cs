@@ -12,10 +12,15 @@ public class ChangeScene : MonoBehaviour
 
     public LevelLoader new_loader;
 
+   // public WorkingButtonScript buttonAction;
+    public ButtonLoad buttonData;
+
     public int SceneID;
+
 
     public void MoveToScene()
     {
+      //  buttonAction.buttonEvent.Invoke();
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
