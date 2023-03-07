@@ -9,8 +9,10 @@ public class LeverInteraction : MonoBehaviour
     private Collider2D targetObject;
     private Vector3 offset;
     private bool is_being_held = false;
-    private static float angle;
+    private float angle;
     private float roatationSpeed;
+
+    private static float new_angle;
     //private enum Cardinal_points { E, S, W, N };
     //Cardinal_points curr_point;
     //private int power;
