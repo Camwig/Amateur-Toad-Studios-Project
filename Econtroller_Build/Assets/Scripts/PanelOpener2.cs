@@ -13,7 +13,7 @@ public class PanelOpener2 : MonoBehaviour
       if (Panel != null)
             {
             bool isActive = Panel.activeSelf;
-            Panel.SetActive(true);
+            Panel.SetActive(!isActive);
             }
     }
 
