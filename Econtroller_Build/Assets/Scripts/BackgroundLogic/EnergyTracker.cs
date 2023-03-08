@@ -15,9 +15,9 @@ public class EnergyTracker : ScriptableObject
         set { NewEnergy = value; }
     }
 
-    private float RateOfIncrease;
+    private int RateOfIncrease;
 
-    public float IncreaseProperty
+    public int IncreaseProperty
     {
         get { return RateOfIncrease; }
         set { RateOfIncrease = value; }

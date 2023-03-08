@@ -20,9 +20,11 @@ public class SliderInteractable : MonoBehaviour
     private enum slide_state {Down,Up,Down_active,Up_active,None};
     private slide_state curr_state;
 
+    public ObjectPositioing these_objects;
+
     [Header("Events")]
 
-    public static EventSytem onSliderActivate;
+    public EventSytem onSliderActivate;
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class SliderInteractable : MonoBehaviour
         //EventSytem new_event = new EventSytem();
         //Need to load it as a script asset
         //onSliderActivate = (EventSytem)Resources.Load("Assets/Scenes/Data/Events/ProductRateRaised.asset");
-        onSliderActivate = Resources.Load<EventSytem>("ProductRateRaised");
+        //onSliderActivate = Resources.Load<EventSytem>("ProductRateRaised");
         //if (onSliderActivate == null)
         //{
         //    int i = 0;
@@ -103,5 +105,11 @@ public class SliderInteractable : MonoBehaviour
     private void OnMouseUp()
     {
         is_being_held = false;
+    }
+
+    private void OnDestroy()
+    {
+        these_objects.gameObjects[1].transform.position = this.transform.position;
+        these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
     }
 }

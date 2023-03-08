@@ -59,9 +59,9 @@ public class MainManager : MonoBehaviour
 
     public void SetRoomIncriment(Component sender, object data)
     {
-       if(data is float)
+       if(data is int)
         {
-            energyTrack.IncreaseProperty = (float)data;
+            energyTrack.IncreaseProperty = (int)data;
         }
     }
 

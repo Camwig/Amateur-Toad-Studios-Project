@@ -6,6 +6,10 @@ public class GenericRoomManager : MonoBehaviour
 {
     public GameObject lever;
 
+    //--------------------------
+    public GameObject slider;
+    //--------------------------
+
     public ObjectPositioing these_objects;
 
     public GenericRoom this_room;
@@ -31,6 +35,11 @@ public class GenericRoomManager : MonoBehaviour
             //Store the angle the lever was at after exit
             lever.transform.position = these_objects.gameObjects[0].transform.position;
             lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+
+            //--------------------------
+            slider.transform.localPosition = these_objects.gameObjects[1].transform.position;
+            slider.transform.rotation = these_objects.gameObjects[1].transform.rotation;
+            //--------------------------
 
             this_room.ActivateRoom(this,energyTracker.ActivatedProperty);
             this_room.SetupInitialEnergy(this, energyTracker.EnergyProperty);
