@@ -83,4 +83,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+<<<<<<< HEAD
 Econtroller_Build/Assets/Video Texture/videoplayback (2).mp4
+=======
+Econtroller_Build/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+>>>>>>> parent of 6d8750c (keeping all files)

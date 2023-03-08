@@ -18,10 +18,6 @@ public class LeverInteraction : MonoBehaviour
 
     public GameObject selectedObject;
 
-    [Header("Events")]
-
-    public EventSytem onLeverActivate;
-
     private void Start()
     {
         //curr_point = Cardinal_points.E;
@@ -71,15 +67,6 @@ public class LeverInteraction : MonoBehaviour
             //    selectedObject.transform.rotation = old_rotate;
             //}
             //
-
-            if (angle >= 20)
-            {
-                onLeverActivate.Raise(this, true);
-            }
-            else
-            {
-                onLeverActivate.Raise(this, false);
-            }
         }
 
         //Only increases rotation at 135 degrees

@@ -858,7 +858,11 @@ RectTransform:
   - {fileID: 554079720}
   - {fileID: 2135190226}
   m_Father: {fileID: 0}
+<<<<<<< HEAD:Econtroller_Build/Assets/Scenes/SampleScene.unity
   m_RootOrder: 7
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 6d8750c (keeping all files):Econtroller_Build/Assets/Scenes/Email.unity
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1015,6 +1019,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587661507}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD:Econtroller_Build/Assets/Scenes/SampleScene.unity
 --- !u!1 &1661593800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,6 +1355,74 @@ Animator:
   m_PrefabInstance: {fileID: 2103894087657243275}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1975913702 stripped
+=======
+--- !u!1001 &1824860843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2103894087581818052, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_Name
+      value: Level Loader
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.552975
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.66172624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -162.02199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103894087581818075, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938489015270937115, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: new_loader
+      value: 
+      objectReference: {fileID: 1824860844}
+    - target: {fileID: 5770635629850684451, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+--- !u!114 &1824860844 stripped
+>>>>>>> parent of 6d8750c (keeping all files):Econtroller_Build/Assets/Scenes/Email.unity
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 585987086539681795, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
   m_PrefabInstance: {fileID: 2103894087657243275}
@@ -1360,6 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96881dca99a4d5e4fa5d22b64f7df550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD:Econtroller_Build/Assets/Scenes/SampleScene.unity
 --- !u!1 &2128729496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1588,12 @@ CanvasRenderer:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8814598976916418476, guid: 52797dccb9f5167418cd2f74433356a1, type: 3}
   m_PrefabInstance: {fileID: 8814598976098239870}
+=======
+--- !u!95 &1824860845 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6331493050333806434, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
+  m_PrefabInstance: {fileID: 1824860843}
+>>>>>>> parent of 6d8750c (keeping all files):Econtroller_Build/Assets/Scenes/Email.unity
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2141053336
 GameObject:
