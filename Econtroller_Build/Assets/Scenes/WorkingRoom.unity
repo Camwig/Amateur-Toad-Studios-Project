@@ -546,20 +546,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338751246506, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338751246506, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338751246506, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
+      propertyPath: slider_state_
+      value: 
+      objectReference: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}
+    - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: these_objects
       value: 
       objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+    - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
+      propertyPath: selectedObject
+      value: 
+      objectReference: {fileID: 604483849}
     - target: {fileID: 8050844338751246511, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: onSliderActivate
       value: 
@@ -570,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338759452742, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8050844338759452742, guid: 0000b56f496ae7a4885cbfe635076c1d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1201,6 +1209,10 @@ PrefabInstance:
       propertyPath: these_objects
       value: 
       objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+    - target: {fileID: 2080543292120628721, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
+      propertyPath: new_slide_state
+      value: 
+      objectReference: {fileID: 11400000, guid: 1109d850d81ecb046b01149c5454fa69, type: 2}
     - target: {fileID: 2080543292120628722, guid: ac8dff7240b32174ab48f168fc2244eb, type: 3}
       propertyPath: m_Name
       value: GenericRoom Manager

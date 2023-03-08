@@ -22,13 +22,21 @@ public class SliderInteractable : MonoBehaviour
 
     public ObjectPositioing these_objects;
 
+    [SerializeField]
+    private SliderState slider_state_;
+
+    public GameObject selectedObject;
+
+    //private bool on_off;
+    private bool on_off2;
+
     [Header("Events")]
 
     public EventSytem onSliderActivate;
 
     private void Start()
     {
-        OriginPos = this.gameObject.transform.localPosition.y;
+        OriginPos = selectedObject.gameObject.transform.localPosition.y;
 
         //EventSytem new_event = new EventSytem();
         //Need to load it as a script asset
@@ -38,6 +46,18 @@ public class SliderInteractable : MonoBehaviour
         //{
         //    int i = 0;
         //}
+
+        if(slider_state_.StateProperty == false)
+        {
+            //curr_state = slide_state.Up_active;
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
+        }
+        
+        if(slider_state_.StateProperty == true)
+        {
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+        }
+
         curr_state = slide_state.None;
         //EventSytem.CreateInstance("Room Activate.asset");
         //AssetDatabase.CreateAsset(new_event, "Assets/Scenes/Data/Events/MyEvent");
@@ -51,26 +71,26 @@ public class SliderInteractable : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint((Input.mousePosition));
         if (is_being_held == true)
         {
-            this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, mousePosition.y - newpos_y, 0);
         }
 
-        if(this.gameObject.transform.localPosition.y < OriginPos && this.gameObject.transform.localPosition.y > OriginPos - 1.5f)
+        if(selectedObject.gameObject.transform.localPosition.y < OriginPos && selectedObject.gameObject.transform.localPosition.y > OriginPos - 1.5f)
         {
             curr_state = slide_state.None;
         }
 
-        if(this.gameObject.transform.localPosition.y >= OriginPos)
+        if(selectedObject.gameObject.transform.localPosition.y >= OriginPos)
         {
-            this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, OriginPos, 0);
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos, 0);
             if (curr_state == slide_state.None)
             {
                 curr_state = slide_state.Up;
             }
         }
 
-        if (this.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
+        if (selectedObject.gameObject.transform.localPosition.y <= OriginPos - 1.5f)
         {
-            this.gameObject.transform.localPosition = new Vector3(this.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
+            selectedObject.gameObject.transform.localPosition = new Vector3(selectedObject.gameObject.transform.localPosition.x, OriginPos - 1.5f, 0);
             if (curr_state == slide_state.None)
             {
                 curr_state = slide_state.Down;
@@ -85,11 +105,13 @@ public class SliderInteractable : MonoBehaviour
         if(curr_state == slide_state.Up)
         {
             onSliderActivate.Raise(this, false);
+            on_off2 = false;
             curr_state = slide_state.Up_active;
         }
         else if(curr_state == slide_state.Down)
         {
             onSliderActivate.Raise(this, true);
+            on_off2 = true;
             curr_state = slide_state.Down_active;
         }
     }
@@ -97,7 +119,7 @@ public class SliderInteractable : MonoBehaviour
     private void OnMouseDown()
     {
         //startpos_x = mousePosition.x - selectedObject.transform.localPosition.x;
-        newpos_y = mousePosition.y - this.transform.localPosition.y;
+        newpos_y = mousePosition.y - selectedObject.transform.localPosition.y;
 
         is_being_held = true;
     }
@@ -109,7 +131,9 @@ public class SliderInteractable : MonoBehaviour
 
     private void OnDestroy()
     {
-        these_objects.gameObjects[1].transform.position = this.transform.position;
-        these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
+        //these_objects.gameObjects[1].transform.position = new Vector3(selectedObject.transform.position.x, OriginPos, 0);
+        these_objects.gameObjects[1].transform.position = selectedObject.transform.position;
+        slider_state_.StateProperty = on_off2;
+        //these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
     }
 }

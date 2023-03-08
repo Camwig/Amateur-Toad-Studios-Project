@@ -144,6 +144,9 @@ public class OverHeadManager : MonoBehaviour
     public Overhead overhead_;
     public EnergyTracker energyTrack;
     public EnergyTracker energyTrack2;
+
+    public SliderState slide_state;
+    public bool now_state;
     //public EnergyTracker energyTrack3;
 
     public static float energyTrack_amount;
@@ -221,13 +224,17 @@ public class OverHeadManager : MonoBehaviour
 
             energyTrack_amount = 0.0f;
             energyTrack2_amount = 0.0f;
-       //     energyTrack3_amount = 0.0f;
+            //     energyTrack3_amount = 0.0f;
+
+            slide_state.StateProperty = false;
 
             firstPlay = false;
         }
         else
         {
             Debug.Log("Running...\n");
+
+            now_state = slide_state.StateProperty;
 
             if (!energyTrack.ActivatedProperty)
             {
@@ -265,6 +272,7 @@ public class OverHeadManager : MonoBehaviour
     private void OnDestroy()
     {
         energyTrack_amount = energyTrack.EnergyProperty;
+        slide_state.StateProperty = now_state;
         //energyTrack2_amount = energyTrack2.EnergyProperty;
         //energyTrack3_amount = energyTrack3.EnergyProperty;
     }
