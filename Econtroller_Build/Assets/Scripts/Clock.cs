@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
     private float timeDuration = 9f * 60f;
     private float timer;
 
+    private bool holder = true;
 
     [SerializeField]
     private TextMeshProUGUI TextTimer;
@@ -35,11 +36,21 @@ public class Clock : MonoBehaviour
 
     private void Timer()
     {
-        timer = timeDuration;
+        if (holder == true)
+        {
+            timer = timeDuration;
+            holder = false;
+        }
+        StartCoroutine(Wait());
     }
 
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+    }
     private void UpdateTimer(float time)
     {
+
         if(timeDuration < 10f * 60f)
         {
             float hours = Mathf.FloorToInt(time / 60);
