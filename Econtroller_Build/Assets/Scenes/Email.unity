@@ -454,14 +454,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 692242ae63a1f2f44a982f891281fcd8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -490,7 +490,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_Children:
-  - {fileID: 1211755152}
+  - {fileID: 1954371044}
   m_Father: {fileID: 1608469704}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -671,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1211755152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -680,17 +680,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211755151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1954371044}
-  m_Father: {fileID: 927583557}
-  m_RootOrder: 0
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.008333334, y: 0.008333334, z: 0.00925926}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: -0.00012207, y: 0}
+  m_AnchoredPosition: {x: 1.6111248, y: -79.87388}
+  m_SizeDelta: {x: 1916.7778, y: 920.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211755153
 MonoBehaviour:
@@ -744,14 +743,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1954371045}
   lines:
-  - Dear Mr Graggle...
-  - 'If Mr Graggle has million number of fans I am one of them. If Mr Graggle has
-    ten fans i am one of them. If Mr Graggle has only one fan and that is me. If
-    Mr Graggle has no fans, that means i am no more on the earth. If the world against
-    Mr Graggle, I am against the world. I love Mr Graggle till my last breath, I
-    am a die hard fan of Mr Graggle '
-  - Thank you,
-  - Mr Graggles #1 Fan
+  - 'Dear Mr Graggle, '
+  - 'Welcome to your first day at Uisge Beatha Distillery. Please find below your
+    tasks for the day. Remember that wasted power is wasted money! And your performance
+    is being monitored. '
+  - 'Sincerely, '
+  - Bob Bruce
+  - 'Distillery Manager '
+  - 'Tasks - '
+  - ' Run mill at fast between 09:00 and 10.15 Run Mash at high and 87 degrees between
+    9:30 and 11:30 Run Wasbacks 4,5 and 6 between 09:15 and 14:30 Run Mill at medium
+    between 10:15 and 10:30 Run Wash 1 from 10:30-14:30 Run Wash 2 from 11:00-15:00
+    Run Wash 3 11:30-15:30 Run Mash at medium and 80 degrees between 11:45 and 12:15
+    Run Mash at low and 70 degrees between 12:15 and 14:00 Run Still 1 at 75 degrees
+    between 14:00 and 16:00 Run still 2 at 80 degrees between 14:30 and 16:30 Run
+    still 3 at 68 degrees between 15:00 and 17:00'
   textSpeed: 0.05
 --- !u!1 &1381471127
 GameObject:
@@ -1142,7 +1148,7 @@ PrefabInstance:
       objectReference: {fileID: 1824860844}
     - target: {fileID: 5770635629850684451, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc5545eb1a56f143a0f005dc15bdfb2, type: 3}
@@ -1360,16 +1366,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954371043}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1211755152}
+  m_Father: {fileID: 927583557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 320}
+  m_AnchoredPosition: {x: -54.3, y: 384.9}
   m_SizeDelta: {x: 1676.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954371045
@@ -1392,7 +1398,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Dear Mr Graggle,\r\n\r\nWelcome to your first day at Uisge Beatha Distillery.
+    Please find below your tasks for the day. Remember that wasted power is wasted
+    money! And your performance is being monitored.\r\n\r\nSincerely,\r\n\r\nBob
+    Bruce\r\nDistillery Manager\r\n\r\nTasks:\n\r\n-Run mill at fast between 09:00
+    and 10.15\r\n-Run Mash at high and 87 degrees between 9:30 and 11:30\r\n-Run
+    Wasbacks 4,5 and 6 between 09:15 and 14:30\r\n-Run Mill at medium between 10:15
+    and 10:30\r\n-Run Wash 1 from 10:30-14:30\r\n-Run Wash 2 from 11:00-15:00\r\n-Run
+    Wash 3 11:30-15:30\r\n-Run Mash at medium and 80 degrees between 11:45 and 12:15\r\n-Run
+    Mash at low and 70 degrees between 12:15 and 14:00\r\n-Run Still 1 at 75 degrees
+    between 14:00 and 16:00\r\n-Run still 2 at 80 degrees between 14:30 and 16:30\r\n-Run
+    still 3 at 68 degrees between 15:00 and 17:00                                              
+    \r\n\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1419,8 +1436,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1614,3 +1631,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084789991}
   m_CullTransparentMesh: 1
+--- !u!1 &2087620336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2087620338}
+  - component: {fileID: 2087620337}
+  m_Layer: 0
+  m_Name: Screenshot 2023-03-08 110739
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!212 &2087620337
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087620336}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: f19bc5b41a064fa42930cdc02f4f25d9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.86, y: 2.15}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2087620338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087620336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0136, y: -0.0174, z: 0}
+  m_LocalScale: {x: 4.618313, y: 4.681371, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
