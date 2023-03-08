@@ -132,7 +132,7 @@ public class SliderInteractable : MonoBehaviour
     private void OnDestroy()
     {
         //these_objects.gameObjects[1].transform.position = new Vector3(selectedObject.transform.position.x, OriginPos, 0);
-        these_objects.gameObjects[1].transform.position = selectedObject.transform.position;
+        //these_objects.gameObjects[1].transform.position = selectedObject.transform.position;
         slider_state_.StateProperty = on_off2;
         //these_objects.gameObjects[1].transform.rotation = this.transform.rotation;
     }
