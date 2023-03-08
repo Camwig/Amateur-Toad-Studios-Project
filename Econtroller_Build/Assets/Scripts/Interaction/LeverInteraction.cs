@@ -11,12 +11,20 @@ public class LeverInteraction : MonoBehaviour
     private bool is_being_held = false;
     private float angle;
     private float roatationSpeed;
+
+    private static float new_angle;
     //private enum Cardinal_points { E, S, W, N };
     //Cardinal_points curr_point;
     //private int power;
     // private int rotation;
 
+    public ObjectPositioing these_objects;
+
     public GameObject selectedObject;
+
+    [Header("Events")]
+
+    public EventSytem onLeverActivate;
 
     private void Start()
     {
@@ -67,6 +75,15 @@ public class LeverInteraction : MonoBehaviour
             //    selectedObject.transform.rotation = old_rotate;
             //}
             //
+
+            if (angle >= 20)
+            {
+                onLeverActivate.Raise(this, true);
+            }
+            else
+            {
+                onLeverActivate.Raise(this, false);
+            }
         }
 
         //Only increases rotation at 135 degrees
@@ -80,5 +97,11 @@ public class LeverInteraction : MonoBehaviour
     private void OnMouseUp()
     {
         is_being_held = false;
+    }
+
+    private void OnDestroy()
+    {
+        these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
+        these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
     }
 }
