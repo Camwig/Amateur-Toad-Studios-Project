@@ -1469,6 +1469,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 381909954, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 381909954, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112446350182951160, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112446350182951160, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142629036161920178, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266995814672916506, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1517,5 +1537,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeverObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: these_objects
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ff94cb40ae6a0946a02d244f00a153d, type: 2}
+    - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: selectedObject
+      value: 
+      objectReference: {fileID: 753724419}
+    - target: {fileID: 8047417593692586231, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
+      propertyPath: onLeverActivate
+      value: 
+      objectReference: {fileID: 11400000, guid: de54560daeb1e494f8353394dd399f93, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f364c7d2585b704991a1bac55574332, type: 3}
