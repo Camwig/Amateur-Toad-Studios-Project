@@ -27,16 +27,16 @@ public class GenericRoomManager : MonoBehaviour
     {
         if (firstPlay == true)
         {
-            Debug.Log("Starting...\n");
+            //Debug.Log("Starting...\n");
             firstPlay = false;
             //new_slide_state.StateProperty = false;
             this_room.SetupState();
         }
         else
         {
-            Debug.Log("Running...\n");
+            //Debug.Log("Running...\n");
             //Store the angle the lever was at after exit
-            lever.transform.localPosition = these_objects.gameObjects[0].transform.position;
+            //lever.transform.localPosition = these_objects.gameObjects[0].transform.position;
             lever.transform.rotation = these_objects.gameObjects[0].transform.rotation;
 
             //--------------------------

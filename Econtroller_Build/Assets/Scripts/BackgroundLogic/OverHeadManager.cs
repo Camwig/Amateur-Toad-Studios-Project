@@ -205,7 +205,7 @@ public class OverHeadManager : MonoBehaviour
 
         if (firstPlay == true)
         {
-            Debug.Log("Starting...\n");
+            //Debug.Log("Starting...\n");
             //PlayerPrefs.DeleteAll();
 
             overhead_.SetEnergy(0);
@@ -232,7 +232,7 @@ public class OverHeadManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Running...\n");
+            //Debug.Log("Running...\n");
 
             now_state = slide_state.StateProperty;
 
@@ -240,11 +240,11 @@ public class OverHeadManager : MonoBehaviour
             {
                 if (energyTrack.EnergyProperty > energyTrack_amount)
                 {
-                    Debug.Log(energyTrack.EnergyProperty);
+                    //Debug.Log(energyTrack.EnergyProperty);
                     //Not doing anything
                     new_energyTrack_amount = energyTrack.EnergyProperty - energyTrack_amount;
                     energyTrack.EnergyProperty = new_energyTrack_amount;
-                    Debug.Log(energyTrack.EnergyProperty);
+                    //Debug.Log(energyTrack.EnergyProperty);
                 }
             }
 

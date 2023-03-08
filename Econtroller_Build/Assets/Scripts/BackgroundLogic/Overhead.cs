@@ -290,7 +290,7 @@ public class Overhead : MonoBehaviour
         {
             time_ += Time.deltaTime;
             //Debug.Log(Overall_Energy);
-            string_text = "Overall Energy : " + Overall_Energy.ToString();
+            string_text = Overall_Energy.ToString();
             textelement.text = string_text;
         }
 
