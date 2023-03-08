@@ -83,4 +83,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+<<<<<<< HEAD
 Econtroller_Build/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Electronic Highway Sign SDF.asset
+=======
+Econtroller_Build/Assets/Video Texture/videoplayback (2).mp4
+>>>>>>> c7809214528637947c771367440f3723bf32dfd5
