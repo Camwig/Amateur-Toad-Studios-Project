@@ -9,7 +9,7 @@ public class LeverInteraction : MonoBehaviour
     private Collider2D targetObject;
     private Vector3 offset;
     private bool is_being_held = false;
-    private float angle;
+    private static float angle;
     private float roatationSpeed;
 
     private static float new_angle;
@@ -32,6 +32,10 @@ public class LeverInteraction : MonoBehaviour
         //power = 0;
         //rotation = 0;
         roatationSpeed = FrictionSpeed.LeverSpeed;
+
+        //selectedObject.transform.localPosition = these_objects.gameObjects[0].transform.localPosition;
+        //selectedObject.transform.rotation = these_objects.gameObjects[0].transform.rotation;
+        //selectedObject.transform.localRotation = these_objects.gameObjects[0].transform.localRotation;
     }
 
     void Update()
@@ -101,7 +105,7 @@ public class LeverInteraction : MonoBehaviour
 
     private void OnDestroy()
     {
-        these_objects.gameObjects[0].transform.position = selectedObject.transform.position;
+        //these_objects.gameObjects[0].transform.localPosition = selectedObject.transform.localPosition;
         these_objects.gameObjects[0].transform.rotation = selectedObject.transform.rotation;
     }
 }
